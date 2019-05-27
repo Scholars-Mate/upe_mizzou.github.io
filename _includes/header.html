@@ -1,16 +1,24 @@
 <header>
   <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <div class="container">
-      <div class="navbar-brand">UPE@Mizzou</div>
+      <a class="navbar-brand" href="/">UPE@Mizzou</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarItems">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarItems">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link">Home</a></li>
-          <li class="nav-item"><a class="nav-link">Major Projects</a></li>
-          <li class="nav-item"><a class="nav-link">Blog/News</a></li>
-          <li class="nav-item"><a class="nav-link">Sponsors/Partners</a></li>
+          <li class="nav-item {% if page.title == "Home" %}active{% endif %}">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item {% if page.title == "Major Projects" %}active{% endif %}">
+            <a class="nav-link" href="{% link major-projects.html %}">Major Projects</a>
+          </li>
+          <li class="nav-item {% if page.title == "Blog/News" %}active{% endif %}">
+            <a class="nav-link" href="{% link blog-news.html %}">Blog/News</a>
+          </li>
+          <li class="nav-item {% if page.title == "Sponsors/Partners" %}active{% endif %}">
+            <a class="nav-link" href="{% link sponsors-partners.html %}">Sponsors/Partners</a>
+          </li>
         </ul>
       </div>
     </div>
